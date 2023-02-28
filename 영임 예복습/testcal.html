@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>13testcal </title>
+<style>  
+   * {  font-size: 30pt; }
+</style>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+// function 
+//     var hap=0, sub=0, gob=0, mok=0;                               
+//     hap=first + second;
+//     sub=first - second;
+//     gob=first * second;
+//     mok=first / second;
+//     if(oper=="add"){document.getElementById("res").value=hap;}                          //1선택지
+//     else if(oper=="sub"){document.getElementById("res").value=sub;}
+//     else if(oper=="mul"){document.getElementById("res").value=gob;}
+//     else if(oper=="div"){document.getElementById("res").value=mok;}
+//     else{    }
+    $(document).ready(function(){
+        
+        let result01 = $('#su1').val();
+            result02 = $('#su2').val();
+
+    $('#show_window').on('click',function(){
+        var result01          
+    })
+});
+
+
+
+</script>
+</head>
+<body>
+    <h2> 13testcal.html </h2>
+    <form name="myform" id="myform">
+        su1 : <input type="text" name="su1" id="su1"> <br>
+        su2 : <input type="text" name="su2" id="su2"> 
+        <p></p>
+              <input type="button" value="더하기" name="btnadd" id="btnadd">
+              <input type="button" value="빼기" name="btnsub" id="btnsub">
+              <input type="button" value="곱하기" name="btngob" id="btngob">
+              <input type="button" value="몫" name="btnmok" id="btnmok">
+    </form>
+    <span id="show_window">값 : </span>
+</body>
+</html> 

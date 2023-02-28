@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title> 01jQuery </title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<style>
+  * { font-size: 14pt;  }
+  a { text-decoration: none;  }
+</style>
+
+<script>
+$(document).ready(function () {
+    $('#btn1').click(function() {
+      $('#btn1').css("background-color", "pink");
+      $('#btn1').css("border", "1px solid yellow");
+      $('#btn1').css("height", "70px");
+      $('#btn1').css("width", "100px");
+      $('#display').html("<h2>button1 눌렸습니다 -html태그 길동</h2>");
+      //document.getElementById('display').innerHTML='<h2>button1 html태그 1시36분 1시39분</h2>
+    });//end
+
+    $('#btn2_myspring').on('click', function (e) {
+      $('#btn2_myspring').css("background-color", "orange");
+      $(this).css("border", "1px solid black");
+      $(this).css("height", "70px");
+      $(this).css("width", "100px");
+      $('#display').text("button2 눌렸습니다"); //문자열로 출력
+    });//end
+
+    $('#btn3').click(function (event) {
+      $('#btn3').css( {
+        "background-color" : "#abcdef" ,
+        "border": "1px solid red" ,
+        "height" : "70px",
+        "width" : "100px" ,
+        "color" : "#ff00ff"
+      });
+      $('#display').html("<h2>button3 눌렸습니다 -문자열 길동</h2>");
+    });//end
+
+    $('#btn4').click(function(){
+      $('#display').css( {"background":"yellow", "font-size": "20px", "color":"red"});
+      $('#display').text("display영역입니다");
+      //$('#display').text("display영역입니다").css( {"background":"yellow", "font-size": "20px", "color":"red"});
+    });
+
+});//제이쿼리시작 끝end 
+</script>
+</head>
+
+<body>
+
+  <h2> 01jQuery.html  </h2>
+  <input type="button" id="btn1" value="버튼1">
+  <input type="button" id="btn2_myspring" value="버튼2">
+  <input type="button" id="btn3" value="버튼3"> <br>
+  <input type="button" id="btn4"  value="버튼4"> 
+  <input type="button" id="btn5" onclick="location.reload()" value="버튼5=로드">
+  <p></p>
+
+  <div id="display"> </div>
+</body>
+
+</html>

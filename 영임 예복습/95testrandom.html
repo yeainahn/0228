@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+<style> *{ font-size: 20pt; } </style>
+
+<script> 
+  var lotto = [ ]; //배열
+  while(lotto.length<6){
+      var num = Math.floor(Math.random()*10)+1;
+      if(lotto.indexOf(num) < 0){ lotto.push(num); }
+  }
+
+  lotto.sort(function(a,b){ return a-b;} );
+  for(var k=0; k<6; k++){
+    document.write(lotto[k], ' ');
+  }
+</script>
+</head>
+<body>
+    <h2> 로또배열 </h2>
+    <img src="./images/main_4.jpg"  width=500 height=300>
+</body>
+</html>

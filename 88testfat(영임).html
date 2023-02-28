@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> </title>
+  </head>
+ 
+<body>
+    <h1> 88testfat.html addEventListener 10:55  10:57 11:04 </h1>
+    88본인키입력 <input type="number" id="height" value="190" /> <br />
+    88몸무게입력 <input type="number" id="weight" value="90" />
+    <button id="btn">결과보기버튼</button>
+    <div id="display"></div>
+</body>
+
+<script>
+  var btnDom = document.querySelector("#btn");
+  
+  var hical = function(){   
+      var heightDom = document.querySelector("#height");
+      var weightDom = document.querySelector("#weight");
+
+      var height = Number(heightDom.value);
+      var weight = Number(weightDom.value);
+      var fat = weight / ((height / 100) * (height / 100));
+     
+      var biman = '';
+      if (fat > 23) {
+        biman = "비만";
+      }else if (fat >20) {
+        biman = "과체중";
+      }else if (fat >18) {
+        biman = "정상";
+      }else{biman = "저체중";}
+     document.getElementById('display').innerHTML='체지방 '+Math.floor(fat) +' 현재상태는 '+biman +'입니다';
+    };//hical end
+
+    btnDom.addEventListener('click', hical );
+</script>
+
+
+</html>

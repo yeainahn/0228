@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+<style> *{font-size: 20pt;}</style>
+
+<script>
+  var base= [10,20,30];
+  document.write(base);
+  document.write('<p>');
+  var area = base.map(function(value,index,array){
+      //  document/write(index, '번째', value,'데이터</br>');
+        return value * 8;
+  });
+
+  document.write('<p>');
+ document.write('area');
+  
+ var data=['javascript', 20, 30,'jQuuery'];
+ data.filter(function(value,index,array){
+    document.write(index, '번째', value,'데이터', array, '</br>') ;
+ });
+
+
+</script>
+</head>
+<body>
+    
+    <h2>10testfilter</h2>
+</body>
+</html>
+

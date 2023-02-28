@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var kg=0, hei=0 result=' ', msg=' ';
+
+        var bmi = kg / hei * hei;
+             
+        if (bmi <= 25) { msg='정상'; }
+        else if (bmi>=29.9) { msg='과체중'; }
+        else if (bmi>=40) { msg='비만'; }
+        else if (bmi>=40.1) { msg='고도비만'; }
+        else { msg= '살빼세요'; }
+
+
+      //  result = 
+
+
+         document.getElementById('btn').innerHTML = result;
+
+         
+
+    </script>
+</head>
+<body>
+    <h1>77testfat.html</h1>
+    본인키 입력 <input type="number" id="height" value="160"><br>
+    몸무게 입력 <input type="number" id="weight" value="50"><br>
+    <button id="btn">결과표 보기</button>
+    <div id="result"> 결과</div>
+</body>
+</html>

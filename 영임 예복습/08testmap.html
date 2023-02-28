@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+<style> *{font-size: 20pt;}</style>
+
+<script>
+  var city = [ '서울', '대구', '제주', '대전', '진주' ];
+  for(var k=0; k<city.length; k=k+1){document.write(city[k], '  '); }
+
+  document.write('<p>');
+  for(var j of city){ document.write( j, '  '); }
+
+  document.write('<p>');
+  city.forEach(function(value, index){ 
+    document.write(index , '번째 ' , value, '<br>');
+  });
+
+  document.write('<hr>392페이지 map(1v,2i,3배열)<br>');
+  var base= [10,20,30];
+  base.map(function(value,index,array){
+        documen.write(index, '번째', value);
+  });
+  
+</script>
+</head>
+<body>
+    
+    <h2>배열</h2>
+</body>
+</html>
+

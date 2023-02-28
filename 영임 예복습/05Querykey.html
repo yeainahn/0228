@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title> 05jQuerykey.html </title>
+<style>  
+   * {  font-size: 25pt; }
+</style>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+
+    var gid='blue';
+$(document).ready(function() {
+    $("#uid").keyup(function(key){
+        var data = $("#uid").val();
+        if(key.keyCode==13){
+         if (gid==data){$("#ckid").text(' 사용이 불가한 아이디입니다').css("color","red"); }
+         else{$("#ckid").text(' 사용이 가능한 아이디입니다').css("color","pink");}
+         }
+        });
+
+         var my1=' ', my2= ' ';
+         $("#pwd1").keyup(function(key){
+            if(key.keyCode==13){
+                my1=$("#pwd1").val();
+                $("#pwd2").focus();}   //두번쨰 비번에 초점가기    
+
+         });
+         $("#pwd2").keyup(function(key){
+            if(key.keyCode==13){
+                my2=$("#pwd2").val();
+                if(my1==my2){$("#ckpwd").text('비번이 일치합니다').css("color","green");}
+                else{$("#ckpwd").text('비번이 불일치합니다').css("color","red");
+                    //  $("#pwd1").val('');
+                    //  $("#pwd2").val('');
+                     $("#pwd1").focus();
+            }
+            }
+
+         });
+
+         
+        });
+
+</script>
+</head>
+<body>
+    <h2> 05jQuerykey.html </h2>
+    <form>
+        유저: <input type="text" name="uid" id="uid"> <span id="ckid"></span> <br>
+        비번1: <input type="password" name="pwd1" id="pwd1" value="1234"><br>
+        비번2: <input type="password" name="pwd2" id="pwd2"><span id="ckpwd" value="1234"></span><br>
+                <input type="button" value="확인요">
+                <input type="reset" onclick="location.reload();"  value="취소">
+
+    </form>
+    
+</body>
+</html> 

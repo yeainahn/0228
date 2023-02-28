@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+<style> *{font-size: 20pt;}</style>
+
+<script>
+  var city = [ '서울', '제주' ];
+
+  city.forEach(function(value, index){ 
+    document.write(index , '번째 ' , value, '<br>');
+  }); document.write('<p>');
+
+ //문제 구로 데이터추가
+  city.push('구로'); 
+  city.forEach(function(value, index){ 
+    document.write(index , '번째 ' , value, '<br>');
+  }); document.write('<p>');
+
+  city.shift();
+  city.forEach(function(value, index){ 
+    document.write(index , '번째 ' , value, '<br>');
+  }); document.write('<p>');
+
+  city.pop();
+  city.forEach(function(value, index){ 
+    document.write(index , '번째 ' , value, '<br>');
+  }); document.write('<p>');
+</script>
+</head>
+<body>
+    
+    <h2> 05test389.html </h2>
+</body>
+</html>
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+<style> *{font-size: 20pt;}</style>
+
+<script>
+ document.write('filter함수예제(1,2,3생략)<p>');
+ var data=['javascript', 20, 30,'jQuuery'];
+ var num = data.filter(function(value,index,array){
+   // document/write(index, '번째', value,'데이터', arry, '</br>');
+    return typeof value=='number';
+ });
+ 
+ document.write(num);
+ 
+
+</script>
+</head>
+<body>
+    
+    <h2>11testfilter</h2>
+</body>
+</html>
+
